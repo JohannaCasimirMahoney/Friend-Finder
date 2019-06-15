@@ -16,27 +16,39 @@
             font-family: 'Special Elite', cursive;
         }
 
+        #container {
+            margin: 40 65 40 90;
+        }
+
         h3 {
             font-size: 40px;
             color: rgb(220, 199, 41);
         }
 
         h4 {
-            font-size: 30px;
+            font-size: 25px;
             color: rgb(220, 199, 41);
         }
 
+        label,
+
         hr,
+
 
         a {
             color: rgb(220, 199, 41);
         }
 
-        .form-control,
+        .form-control {
+            padding: 5px;
+            width: 550px;
+
+        }
+
         .custom-select-sm {
-            border-color: navy;
+            border-color: rgb(220, 199, 41);
             background-color: rgb(235, 243, 255);
-            color: navy;
+            color: rgb(220, 199, 41);
             margin-right: 25px;
         }
 
@@ -56,15 +68,11 @@
             height: 280px;
         }
 
-        #line-marker {
+        #linemarker {
 
             border: solid 1px rgb(220, 199, 41) !important;
             width: 100% !important;
             color: rgb(220, 199, 41) !important;
-        }
-
-        #container {
-            margin: 40 65 40 90;
         }
     </style>
 
@@ -78,22 +86,214 @@
             <strong>Survey Questions</strong>
         </h3>
         <!-- creates a line across -->
-        <hr class="row" id="line-marker">
+        <hr class="row" id="linemarker">
 
         <h4 class="row">
             <strong>About You</strong>
         </h4>
 
         <div class="form-group row">
-            <label for="name">Name (Required)</label>
-            <input type="name" class="form-control" placeholder="name" id="name" required>
+            <label for="name">
+                <h4>Name (Required)</h4>
+            </label>
+            <input type="text" id="name" class="form-control" required>
         </div>
 
         <div class="form-group row">
-            <label for="photo">Link to Photo Image (Required)</label>
+            <label for="photo">
+                <h4>Link to Photo Image (Required)</h4>
+            </label>
+            <input type="text" id="photo" class="form-control" required>
         </div>
         <!-- creates a line across -->
-        <hr class="row" id="line-marker">
+        <hr class="row" id="linemarker">
+        <!-- Questions -->
+        <form>
+            <h4 class="row">
+                <strong>Question 1</strong>
+            </h4>
+            <label for="sel1" class="row">I am adventurous.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question1">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 2</strong>
+            </h4>
+            <label for="sel1" class="row">I believe Sunday is for church.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question2">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 3</strong>
+            </h4>
+            <label for="sel1" class="row">I perfer to save money rather then spend money.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question3">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 4</strong>
+            </h4>
+            <label for="sel1" class="row">To be sucessful you should have a college degree.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question4">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 5</strong>
+            </h4>
+            <label for="sel1" class="row">Traveling is vital to happiness.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question5">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 6</strong>
+            </h4>
+            <label for="sel1" class="row">A long work week should end with a cocktail.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question6">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 7</strong>
+            </h4>
+            <label for="sel1" class="row">Having kids is imporant to me.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question7">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 8</strong>
+            </h4>
+            <label for="sel1" class="row">I go to the movies at least once a month.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question8">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 9</strong>
+            </h4>
+            <label for="sel1" class="row">I perfer collegiate sports over professional sports.</label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question9">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4 class="row">
+                <strong>Question 10</strong>
+            </h4>
+            <label for="sel1" class="row">You should know how to swim by at least age 15.
+            </label>
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <select class="custom-select-sm" id="question10">
+                        <option selected>Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <button type="submit" class="btn btn-lg btn-block" id="submit">
+                Submit</button>
+        </div>
+
+        <div id="links">
+            <hr class="row" id="line-marker">
+            <a href="/api/friends">API Friends List </a>
+            |
+            <a href="https://github.com/pmactavish13/Friend-Finder"> GitHub Repo</a>
+
+        </div>
+    </div>
 
 
 

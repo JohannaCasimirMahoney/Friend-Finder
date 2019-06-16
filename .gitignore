@@ -1,3 +1,5 @@
 Don't display these files
-#node_module
+#node_modules
+
+
 

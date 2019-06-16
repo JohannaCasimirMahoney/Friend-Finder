@@ -323,8 +323,47 @@
     </div>
     </div>
     </div>
-
-
 </body>
+
+<script>
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+        // check that input is valid
+        for (var i = 1; i < 11; i++) {
+            if ($.trim($("#question" + [i]).val()) === "" || $("#question" + [i]).val().trim() === "Select an Option") {
+                alert("Please fill out all fields before submitting!");
+                return false;
+            };
+        };
+        if ($.trim($("#name").val()) === "" || $.trim($("#name").val()) === "name") {
+            alert("Please fill out all fields before submitting!");
+            $("#name").val("Enter a valid name");
+            return false;
+        } else if ($.trim($("#photo").val()) === "" || $.trim($("#url").val()) === "photo") {
+            $("#photo").val("Enter a valid url address");
+            alert("Please fill out all fields before submitting!");
+            return false;
+        } else {
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [$("#question1").val(), $("#question2").val(), $("#question3").val(), $("#question4").val(), $("#question5").val(), $("#question6").val(), $("#question7").val(), $("#question8").val(), $("#question9").val(), $("#question10").val()]
+            };
+
+            var currentURL = window.location.origin;
+            $.post("/api/friends", newFriend, function (data) {
+                $("#matchName").text(data.name);
+                $("#matchImg").attr("src", data.photo);
+                // Show the modal with the best match 
+                $("#resultsModal").modal("toggle");
+            });
+        };
+    });
+</script>
+
+
+
+
+
 
 </html>

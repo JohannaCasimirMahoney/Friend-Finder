@@ -10,15 +10,13 @@ var PORT = process.env.PORT || 3000;
 // Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // Static files allows the call to be made before the routes in order for it to work.
-app.use(express.static('app/public'));
+app.use(express.static('app'));
 
 //Routers
 require('./app/routing/apiRoutes.js')(app);
-//html routes
 require('./app/routing/htmlRoutes.js')(app);
 
 // Listening port 

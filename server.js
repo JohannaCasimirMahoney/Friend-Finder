@@ -7,15 +7,19 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Body Parser
+// Body Parser app to data
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-// Static files allows the call to be made before the routes in order for it to work.
-app.use(express.static('app'));
+app.use(bodyParser.text());
+app.use(bodyParser.json({
+    type: "application/vnd.api+json"
+}));
 
-//Routers
+
+//Routes
 require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
 

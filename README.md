@@ -5,7 +5,7 @@ Friend Finder is a compatibility-based application -- basically a dating app. Th
 
 You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
 
-<a href="https://protected-meadow-77050.herokuapp.com/">Friend Finder</a>
+<a href="https://protected-meadow-77050.herokuapp.com/">Friend Finder Application</a>
 
 
 ### Technology Used

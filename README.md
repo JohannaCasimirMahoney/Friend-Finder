@@ -1,35 +1,42 @@
 # Friend-Finder
 
 ### Overview
-In this assignment, I created an app call LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will have the capability to search Spotify for songs, Bands in Town for concerts, and OMDB for movies. LIRI will be a command line node app that takes in parameters and gives you back data.
+FriendFinder is a compatibility-based application -- basically a dating app. This full-stack site will take in results from the users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. The survey consists of 10 questions and each answer is on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
+
+You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
 
 <a href="https://youtu.be/7vCgmy8MAcw">Liri-node-app</a>
 
 
 ### Technology Used
 
-* Axios
+* Express
 
 * Node.js
 
-* OMDB API
+* Heroku
 
-* Bandsintown API
+* NPM install
 
-* Spotify API
+* Path
 
-* Moment
+### How it works
 
-* DotEnv
+* Create a folder called `FriendFinder`. Inside the folder, organize your directories so it matches the following:
 
-* JSON
-
-### What Each Command Should Do
-
-1. Concert-This
-
-2. Sporify-This-Song
-
-3. Movie-This
-
-4. Do-What-It-Says
+```
+  FriendFinder
+    - .gitignore
+    - app
+      - data
+        - friends.js
+      - public
+        - home.html
+        - survey.html
+      - routing
+        - apiRoutes.js
+        - htmlRoutes.js
+    - node_modules
+    - package.json
+    - server.js
+  ```

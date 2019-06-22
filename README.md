@@ -54,3 +54,12 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
    * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 
 5. You should save your application's data inside of `app/data/friends.js` as an array of objects. Each of these objects should roughly follow the format below.
+
+6. Determine the user's most compatible friend using the following as a guide:
+
+   * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
+   * With that done, compare the difference between current user's scores against those from other users, question by     question. Add up the differences to calculate the `totalDifference`.
+   
+   7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
+   * The modal should display both the name and picture of the closest match.
+   
